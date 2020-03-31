@@ -3,17 +3,17 @@ import './Contact.css';
 
 const online = true;
 
-function Contact() {
+function Contact3() {
     return (
     <figure className="Contact">
       <img class="avatar" 
-        src="https://media.tenor.com/images/51f2f57be93a6bbc966b4802e0507e7d/tenor.gif"
-        alt="Elle Woods winks"
+        src="https://media.tenor.com/images/d25831be67c14ea5550f4425ca769fac/tenor.gif"
+        alt="Cardy B"
       />
       <div>
       
         <blockquote className="name">
-          Elle Woods
+          Cardy B
         </blockquote>
         <status >
         <div className={online ? "status-online" : "status-offline"}></div>
@@ -25,9 +25,4 @@ function Contact() {
     </figure>
     );
 }
-
-
-
-
-
-export default Contact;
+export default Contact3;
