@@ -1,27 +1,20 @@
 import React from 'react';
 import './Contact.css';
+ 
 
-const online = true;
-
-function Contact() {
+function Contact(props) {
     return (
-    <figure className="Contact">
-      <img class="avatar" 
-        src="https://media.tenor.com/images/51f2f57be93a6bbc966b4802e0507e7d/tenor.gif"
-        alt="Elle Woods winks"
-      />
-      <div>
-      
-        <blockquote className="name">
-          Elle Woods
-        </blockquote>
-        <status >
-        <div className={online ? "status-online" : "status-offline"}></div>
-
-          {online ? 'Online' : 'Offline'}
-        </status>
-       
-      </div>
+      <figure className="Contact">
+      <img className="avatar" src={props.avatar} alt={props.name} />
+      <figcaption>
+        <div className="name">{props.name}</div>
+        <div className="status">
+          <span
+            className={props.isOnline ? "status-online" : "status-offline"}
+          />
+          <span className="">{props.isOnlineStr}</span>
+        </div>
+      </figcaption>
     </figure>
     );
 }
