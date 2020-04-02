@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contact.css';
- 
+import PropTypes from 'prop-types'; 
 
 function Contact(props) {
     return (
@@ -18,7 +18,11 @@ function Contact(props) {
     </figure>
     );
 }
-
+Contact.propTypes ={
+  avatar  : PropTypes.string.isRequired,
+  name    : PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired
+}
 
 
 
